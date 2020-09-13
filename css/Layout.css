@@ -11,7 +11,6 @@
 }
 
 .lyt-footer {
-    min-height: 100%;
     max-height: 5em;
     grid-area: footer;
 }
@@ -25,8 +24,18 @@
                         "... content ..."
                         "... footer ...";
 }
+html {
+    font-size: 30px;
+}
+
+
+  
+
 /* DESKTOP - layout for desktop and large screens */
 @media (min-device-width: 700px), (device-width: 700px) {
+    html {
+        font-size: 12px;
+    }
     .lyt-sidebar {
         width: 10em;
         height: 100%;
@@ -37,10 +46,18 @@
     .lyt-layout {
         display: grid;
         grid-gap: 0.5vw;
-        grid-template-columns: 14em 5vw 60vw ;
+        grid-template-columns: 14em calc(40vw / 2 - 14em) 60vw ;
         grid-template-areas: "sidebar ... ....... ...."
                              "sidebar ... content ...."
                              "sidebar ... footer  ....";
+    }
+
+    .img-small {
+        max-width: 50%;
+    }
+
+    .img-medium {
+        max-width: 80%;
     }
 
     .Sidenav a {
