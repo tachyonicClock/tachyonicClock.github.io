@@ -1,22 +1,80 @@
-body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+/* Colour Variables */
+:root {
+  color-scheme: light dark;
+
+  --active-text: ActiveText;
+  --canvas: Canvas;
+  --canvas-text: CanvasText;
+  --link-text: LinkText;
+  --visited-text: VisitedText;
+  --accent: AccentColor;
+
+  /* Base border color of controls. */
+  --border: ButtonBorder;
 }
 
+
+body {
+  /* Use the system default serif font */
+  font-family: ui-serif, serif;
+  max-width: 66ch;
+  margin: auto;
+
+  background-color: var(--canvas);
+  color: var(--canvas-text);
+}
+
+pre {
+  /* Allows 80ch of monospace font to be displayed in 60ch of serif */
+  font-size: 0.90em;
+  font-family: ui-monospace, monospace;
+  padding: 5pt;
+  /* rounded corners */
+  border-radius: 4px;
+  overflow: scroll;
+}
+
+h1, h2, h3, h4, h5, h6, .menu {
+  font-family: ui-sans-serif, sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* header and footer areas */
+.menu {
+  padding: 0;
+}
+.menu li { display: inline-block; }
+.article-meta, .menu a {
+  /* text-decoration: none; */
+  /* background: #eee; */
+  padding: 5px;
+  border-radius: 5px;
+}
+.menu, .article-meta, footer { text-align: center; }
+.title { font-size: 1.1em; }
+
 header {
-  border-bottom: 1px solid #222;
+  border-bottom: 2pt solid var(--border);
   margin-bottom: 1rem;
 }
 
 footer {
-  border-top: 1px solid #222;
+  border-top: 2pt solid var(--border);
   margin-top: 1rem;
 }
 
+.footnotes {
+  font-size: smaller;
+}
+
+hr {
+  color: var(--border);
+}
+
 a {
-  color: #00e;
-  text-decoration: none;
+  color: var(--link-text);
+}
+a:visited {
+  color: var(--visited-text);
 }
