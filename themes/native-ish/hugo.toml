@@ -12,16 +12,9 @@ name = 'Posts'
 pageRef = '/posts'
 weight = 20
 
-
 [[menus.main]]
-name = 'CV'
-pageRef = '/CV'
-weight = 20
-
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
+name = "Papers"
+pageRef = "/papers"
 
 [module]
   [module.hugoVersion]

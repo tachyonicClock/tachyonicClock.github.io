@@ -15,8 +15,8 @@
 
 
 body {
-  /* Use the system default serif font */
-  font-family: ui-serif, serif;
+  /* Use the system default sans-serif font */
+  font-family: ui-sans-serif, sans-serif;
   max-width: 66ch;
   margin: auto;
 
