@@ -20,9 +20,24 @@ body {
   margin: auto;
   max-width: 66ch;
 
+  font-size: 1.0rem;
+
   background-color: var(--canvas);
   color: var(--canvas-text);
 }
+
+p {
+  font-family: ui-serif, serif;
+  text-align: justify;
+}
+
+@media only screen and ( max-width: 66ch )  {
+  /* Left align text */
+  p {
+    text-align: left;
+  }
+}
+
 
 main {
   display: grid;
@@ -36,12 +51,6 @@ main > * {
   grid-column: 2;
 }
 
-p {
-  /* Justify text */
-  text-align: justify;
-  /* Paragraph text should be serif */
-  font-family: ui-serif, serif;
-}
 
 pre {
   /* Allows 80ch of monospace font to be displayed in 60ch of serif */
