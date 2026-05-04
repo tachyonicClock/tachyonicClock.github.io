@@ -6,7 +6,7 @@ draft = true
 
 Form follows function is the idea in design that the appearance of something is dictated by its purpose[^1]. This is utilitarian design. 
 
-Assuming the function of something does not change neither will its form. Fashion changes but function is a constant. 
+Assuming the function of something does not change neither will its form. Fashion changes but function is a constant.  
 
 
 ## Line Width

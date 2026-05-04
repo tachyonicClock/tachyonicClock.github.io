@@ -17,11 +17,30 @@
 body {
   /* Use the system default sans-serif font */
   font-family: ui-sans-serif, sans-serif;
-  max-width: 66ch;
   margin: auto;
+  max-width: 66ch;
 
   background-color: var(--canvas);
   color: var(--canvas-text);
+}
+
+main {
+  display: grid;
+  grid-template-columns:
+    minmax(1ch, 1fr)
+    minmax(0, 66ch)
+    minmax(1ch, 1fr);
+}
+
+main > * {
+  grid-column: 2;
+}
+
+p {
+  /* Justify text */
+  text-align: justify;
+  /* Paragraph text should be serif */
+  font-family: ui-serif, serif;
 }
 
 pre {
@@ -38,6 +57,20 @@ h1, h2, h3, h4, h5, h6, .menu {
   font-family: ui-sans-serif, sans-serif;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1ch;
+}
+
+.section-title .rss-link {
+  font-size: 0.65em;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0.75;
 }
 
 /* header and footer areas */
@@ -59,10 +92,6 @@ header {
   margin-bottom: 1rem;
 }
 
-footer {
-  border-top: 2pt solid var(--border);
-  margin-top: 1rem;
-}
 
 .footnotes {
   font-size: smaller;
@@ -77,4 +106,31 @@ a {
 }
 a:visited {
   color: var(--visited-text);
+}
+
+.posts-list {
+  border-collapse: collapse;
+  width: 100%;
+}
+.posts-list td:first-child {
+  white-space: nowrap;
+  padding-right: 1.5ch;
+  color: var(--canvas-text);
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+main > p:has(img) {
+  justify-self: center;
+  max-width: 100vw;
+  /* Max height is 50 characters */
+  max-height: 66ch;
+  grid-column: 1 / 4;
+}
+main > p > img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  border-radius: 4px;
 }

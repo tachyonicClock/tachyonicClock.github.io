@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <h1 class="section-title">
+    <span>{{ .Title }}</span>
+    {{ with .OutputFormats.Get "rss" }}
+      <a class="rss-link" href="{{ .RelPermalink }}">[rss]</a>
+    {{ end }}
+  </h1>
+  {{ .Content }}
+  <table class="posts-list">
+    <tbody>
+      {{ partial "feed-table.html" . }}
+    </tbody>
+  </table>
+{{ end }}

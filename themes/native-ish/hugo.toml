@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://antonlee.kiwi/'
 languageCode = 'en-US'
-title = 'My New Hugo Site'
+title = 'Anton Lee'
 
 [[menus.main]]
 name = 'Home'
@@ -15,6 +15,12 @@ weight = 20
 [[menus.main]]
 name = "Papers"
 pageRef = "/papers"
+weight = 30
+
+[[menus.main]]
+name = "Reblogs"
+pageRef = "/reblogs"
+weight = 40
 
 [module]
   [module.hugoVersion]

@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <h1 class="section-title">
+    <span>{{ .Title }}</span>
+    {{ with .OutputFormats.Get "rss" }}
+      <a class="rss-link" href="{{ .RelPermalink }}">[rss]</a>
+    {{ end }}
+  </h1>
+  {{ .Content }}
+  {{ range .Pages.ByDate.Reverse }}
+    {{ $authors := .Params.authors }}
+    {{ $n := len $authors }}
+    {{ $authorStr := "" }}
+    {{ if eq $n 1 }}
+      {{ $authorStr = index $authors 0 }}
+    {{ else if eq $n 2 }}
+      {{ $authorStr = printf "%s & %s" (index $authors 0) (index $authors 1) }}
+    {{ else }}
+      {{ $lead := delimit (first (sub $n 1) $authors) ", " }}
+      {{ $authorStr = printf "%s, & %s" $lead (index $authors (sub $n 1)) }}
+    {{ end }}
+    <p>
+      {{ $authorStr }}
+      {{ with .Date }}({{ . | time.Format "2006" }}).{{ end }}
+      <a href="{{ .RelPermalink }}"><em>{{ .LinkTitle }}</em></a>.
+      {{ with .Params.conference }}{{ . }}.{{ end }}
+      <br/>
+      {{ with .Params.doi }}<a href="https://doi.org/{{ . }}">{{ . }}</a>{{ end }}
+      {{ with .Params.pdf }}<a href="{{ . }}">[PDF]</a>{{ end }}
+      {{ with .Params.source }}<a href="{{ . }}">[Source]</a>{{ end }}
+    </p>
+  {{ end }}
+{{ end }}

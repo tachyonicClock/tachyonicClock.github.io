@@ -1,6 +1,7 @@
 ---
-title: Papers
+title: Reblogs
 outputs:
   - html
   - rss
 ---
+ 

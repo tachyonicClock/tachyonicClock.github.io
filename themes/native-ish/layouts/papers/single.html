@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+  <p class="paper-meta">
+    {{ with .Params.authors }}{{ delimit . ", " }} &mdash; {{ end -}}
+    {{ with .Params.conference }}{{ . }}{{ end -}}
+    {{ with .Date }}, <time datetime="{{ . | time.Format "2006-01-02" }}">{{ . | time.Format "2006" }}</time>{{ end }}
+  </p>
+
+  <p class="paper-links">
+    {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}
+    {{ with .Params.pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+    {{ with .Params.source }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source Code</a>{{ end }}
+  </p>
+
+  {{ .Content }}
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ end }}
