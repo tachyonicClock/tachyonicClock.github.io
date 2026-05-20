@@ -11,6 +11,7 @@
     {{ with .Params.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}
     {{ with .Params.pdf }}<a href="{{ . }}">PDF</a>{{ end }}
     {{ with .Params.source }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Source Code</a>{{ end }}
+    {{ with .Params.link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">Link</a>{{ end }}
   </p>
 
   {{ .Content }}

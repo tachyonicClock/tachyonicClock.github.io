@@ -12,3 +12,6 @@ pdf: /papers/conf_cikm_LeeZGBP23.pdf
 doi: 10.1145/3583780.3615236
 source: https://github.com/tachyonicClock/SurpriseNet-CIKM-23
 ---
+
+
+<img src="/papers/conf_cikm_LeeZGBP23.webp" alt="Poster" class="poster"/>

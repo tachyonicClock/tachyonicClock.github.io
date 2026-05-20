@@ -7,20 +7,20 @@ name = 'Home'
 pageRef = '/'
 weight = 10
 
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
+# [[menus.main]]
+# name = 'Posts'
+# pageRef = '/posts'
+# weight = 20
 
 [[menus.main]]
 name = "Papers"
 pageRef = "/papers"
 weight = 30
 
-[[menus.main]]
-name = "Reblogs"
-pageRef = "/reblogs"
-weight = 40
+# [[menus.main]]
+# name = "Reblogs"
+# pageRef = "/reblogs"
+# weight = 40
 
 [module]
   [module.hugoVersion]

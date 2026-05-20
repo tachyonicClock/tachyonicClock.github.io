@@ -8,6 +8,8 @@ theme = 'native-ish'
     style="github-dark"
 
   [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true

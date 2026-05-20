@@ -11,3 +11,5 @@ pdf: /papers/conf_aaai_LeeGZK25.pdf
 doi: 10.1609/AAAI.V39I17.33986
 source: https://github.com/tachyonicClock/AAAI25-clkan
 ---
+
+<img src="/papers/conf_aaai_LeeGZK25.webp" alt="Poster" class="poster"/>

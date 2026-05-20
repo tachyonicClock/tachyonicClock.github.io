@@ -1,7 +1,7 @@
 ---
 title: "Gothello"
 date: 2020-09-13T11:40:18+12:00
-draft: false
+draft: true
 ---
 
 What if Othello and Go were mixed? They share lots of similarities so it must be possible right? As part of the *Smoke and Mirrors paper* at the University of Waikato, me and one other student created a mashup strategy game combining the game of Othello and Go. Our end product was a web application and was playable online. I worked on the Java server and a ReactJS client while my teammate worked on coding the rules.
@@ -76,7 +76,7 @@ Sometimes it is interesting to think about what the worst idea could be, this le
 
 In the end, we decided upon a simple concept: we would divide the board into sections. This idea involved subdividing the whole 8x8 board into 4 4x4 sub-boards. In each of these sub-boards, a different rule set would apply.
 
-<img class="img-medium" alt="Gothello Board" src="vVnWkC.webp">
+![Gothello Board](vVnWkC.webp)
 
 This was an intriguing idea because of how the borders between sub-boards would interact. A Go move could have a game-changing effect on the Othello board and vice-versa. For example, a Go move could flip a line in an Othello game or an Othello move could help capture some Go stones.
 
