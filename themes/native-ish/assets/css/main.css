@@ -147,13 +147,14 @@ img {
 
 .img-large {
   justify-self: center;
+  max-width: 100%;
   max-height: 100ch;
   grid-column: 1 / 4;
 }
 
 .poster {
   justify-self: center;
-  max-width: calc(var(--middle-column-width) * 2);
+  max-width: min(calc(var(--middle-column-width) * 2), 100%);
   grid-column: 1 / 4;
 }
 
